@@ -21,7 +21,9 @@ import distributed as dist
 from models import CDiT_models
 from datasets import EvalDataset
 from PIL import Image
-
+#Allows block size up to 1GB, for local testing only, remove for cluster
+from PIL import ImageFile
+ImageFile.MAXBLOCK = 2**20 * 1024
 
 def save_image(output_file, img, unnormalize_img):
     img = img.detach().cpu()

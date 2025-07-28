@@ -36,7 +36,9 @@ parser.add_argument('--num_workers', type=int, default=8, help="Num workers for 
 args = parser.parse_args()
 
 # ======================= Derived Paths ========================
-root_dir = os.getcwd()  # assumes script is in NWM root dir
+#root_dir = os.getcwd()  # assumes script is in NWM root dir
+
+root_dir = "//mnt/e/results"
 
 gt_dir = os.path.join(root_dir, "output_GT")
 pred_dir = os.path.join(root_dir, "output_pred")
